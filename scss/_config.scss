@@ -1,0 +1,68 @@
+// Options
+$enable-rfs: false;
+$enable-negative-margins: true;
+
+// Grid system
+$grid-columns: 12;
+$grid-gutter-width: 24px;
+$grid-row-columns: 6;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1240px
+);
+
+$container-padding-x: 40px;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1180px
+);
+
+$include-column-box-sizing: true;
+
+// Spacing
+$spacer: 16px;
+$spacers: (
+  0: 0,
+
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 0.75,
+  4: $spacer * 1,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+  7: $spacer * 1.75,
+  8: $spacer * 2,
+
+  t10: 10px,
+  t15: 15px,
+  t20: 20px,
+  t25: 25px,
+  t30: 30px,
+  t40: 40px,
+  t50: 50px,
+  t60: 60px,
+  t70: 70px,
+  t75: 75px,
+  t80: 80px,
+  t90: 90px,
+  t100: 100px
+);
+
+// Aspect ratios
+$aspect-ratios: (
+  "1x1": 100%,
+  "5x3": calc(3 / 5 * 100%),
+  "3x2": calc(2 / 3 * 100%),
+  "4x3": calc(3 / 4 * 100%),
+  "16x9": calc(9 / 16 * 100%),
+);
+
+// Imports
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";

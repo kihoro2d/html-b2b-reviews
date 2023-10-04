@@ -1,0 +1,105 @@
+@import "config";
+
+@import "bootstrap/scss/mixins/banner";
+@include bsBanner(Custom);
+
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+
+@import "bootstrap/scss/helpers/ratio";
+@import "bootstrap/scss/helpers/stacks";
+@import "bootstrap/scss/helpers/stretched-link";
+@import "bootstrap/scss/helpers/text-truncation";
+@import "bootstrap/scss/helpers/visually-hidden";
+
+@import "bootstrap/scss/utilities";
+
+$utilities: map-get-multiple(
+  $utilities,
+  (
+    "display",
+    "order",
+    "flex",
+    "flex-direction",
+    "flex-grow",
+    "flex-shrink",
+    "flex-wrap",
+    "justify-content",
+    "align-items",
+    "align-content",
+    "align-self",
+    "gap",
+    "row-gap",
+    "column-gap",
+    "margin",
+    "margin-x",
+    "margin-y",
+    "margin-top",
+    "margin-end",
+    "margin-bottom",
+    "margin-start",
+    "negative-margin",
+    "negative-margin-x",
+    "negative-margin-y",
+    "negative-margin-top",
+    "negative-margin-end",
+    "negative-margin-bottom",
+    "negative-margin-start",
+    "padding",
+    "padding-x",
+    "padding-y",
+    "padding-top",
+    "padding-end",
+    "padding-bottom",
+    "padding-start",
+    "width",
+    "max-width",
+    "viewport-width",
+    "min-viewport-width",
+    "height",
+    "max-height",
+    "viewport-height",
+    "min-viewport-height",
+    "text-align",
+    "text-decoration",
+    "position",
+    "top",
+    "bottom",
+    "start",
+    "end",
+    "z-index",
+    "overflow"
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "object-fit": (
+      property: object-fit,
+      class: obj-fit,
+      responsive: false,
+      values: (
+        contain: contain,
+        cover: cover,
+        fill: fill,
+        scale: scale-down,
+        none: none
+      )
+    ),
+    "object-position": (
+      property: object-position,
+      class: obj-pos,
+      responsive: true,
+      values: (
+        top: top,
+        bottom: bottom,
+        start: left,
+        end: right,
+        center: center
+      )
+    )
+  )
+);
+
+@import "bootstrap/scss/utilities/api";
